@@ -3,7 +3,8 @@ let N;
 let total;
 let speed = 1;
 let path = [];
-let counter = 0;
+let counter = 1;
+let prev = 1;
 let wait = false;
 let colour = [];
 
@@ -36,46 +37,48 @@ function start() {
 }
 
 function draw() {
-  //console.log(counter);
-  stroke(255);
-  strokeWeight(1);
-  noFill();
+  if(!wait) {
+    strokeWeight(1);
+    noFill();
 
-  for (let i = 1; i < counter; i++) {
-    let h = colour[Math.floor(360 * (i/path.length))];
-    stroke(h, 255, 255);
-    line(path[i].x, path[i].y, path[i - 1].x, path[i - 1].y);
-  }
+    for (let i = prev; i < counter; i++) {
+      try {
+      let h = colour[Math.floor(360 * (i/path.length))];
+      stroke(h, 255, 255);
+      line(path[i].x, path[i].y, path[i - 1].x, path[i - 1].y);
+      } catch (e) {
+        console.log(prev , " " , counter);
+        return;
+      }
+    }
 
-  switch (counter) {
-    case -1:
-      return;
-    case path.length:
-      counter = -1;
-      break;
-    case counter + speed > path.length:
-      counter = path.length;
-      break;
-    default:
-      counter += speed;
-      break;
-  }
-  if (counter === -1) {
-    if (!wait) {
+    switch (counter) {
+      case path.length:
+        wait = true;
+        break;
+      case counter + speed > path.length:
+        counter = path.length;
+        break;
+      default:
+        prev = counter == 0 ? 1 : counter;
+        counter += speed;
+        break;
+    }
+    if (wait) {
       setTimeout(() => {
-        seeOrder();
+        changeOrder();
       }, 3000);
     }
-    wait = true;
   }
 }
 
-function seeOrder() {
+function changeOrder() {
   wait = false;
+  prev = 1;
   counter = 0;
-  order = order == 9 ? 0 : order++;
+  order = order == 10 ? 0 : order++;
   order ++;
-  speed = pow(2,order);
+  speed = speed * 2;
   start();
 }
 
