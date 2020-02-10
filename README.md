@@ -1,3 +1,2 @@
 # Algos
-Algorithm practice and implementation 
--> p5.js 
+Visualizing algorithms with p5.js 
