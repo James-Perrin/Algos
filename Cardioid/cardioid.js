@@ -16,7 +16,7 @@ function getVector(index, total) {
 function draw() {
   background(0);
   const total = 200; //int(map(mouseX, 0, width, 0, 200));
-  factor += 0.015;
+  factor += 0.02;
 
   translate(width / 2, height / 2);
   stroke(255, 150);
