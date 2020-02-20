@@ -8,7 +8,7 @@ let wW1 = -2;
 let wW2 = 0.5;
 
 function setup() {
-  createCanvas(4096,4096);
+  createCanvas(512,512);
   pixelDensity(1);
 
   frDiv = createDiv('');
