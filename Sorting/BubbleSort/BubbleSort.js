@@ -2,7 +2,7 @@ let arr = [];
 let x = 0;
 
 function setup () {
-    createCanvas(windowWidth-100, windowHeight-100);
+    createCanvas(900-100, 900-100);
     arr = new Array(width);
     for(let x=0; x<width; x++) {
         arr[x] = random(height);

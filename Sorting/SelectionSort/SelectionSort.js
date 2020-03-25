@@ -3,11 +3,12 @@ let min_index;
 let temp;   
 let i = 0;
 let num;
+let bool = true;
 
 function setup () {
-    createCanvas(windowWidth-100, windowHeight-100);
+    createCanvas(900-100, 900-100);
     arr = new Array(width);
-    for(let i=0; i<width; i++) {
+    for(let i=0; i<width+1; i++) {
         arr[i] = random(height);
     }
 }
@@ -20,7 +21,16 @@ function draw () {
     for (let x = 0; x < arr.length; x++) {
         stroke(255);
         line(x, height, x, height - arr[x]);
-      }
+    }
+    if(keyCode === LEFT_ARROW){
+        if(!bool){
+            loop();
+        } else if(bool){
+            console.log('DEBUG');
+            noLoop();
+        }
+        bool = !bool;
+    }
 }
 
 function selectionIteration() {

@@ -1,4 +1,4 @@
-let maxDepth = 20;
+let maxDepth = 500;
 let limit = 16;
 
 let wH1 = -1.25;
