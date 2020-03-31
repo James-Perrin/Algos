@@ -1,0 +1,8 @@
+﻿  3D-Engine.cpp
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(166,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(166,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(165,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(165,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(164,55): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\jdper\Repo\Algos\C++\3D-Engine\3D-Engine\3D-Engine.cpp(164,34): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  3D-Engine.vcxproj -> C:\Users\jdper\Repo\Algos\C++\3D-Engine\Debug\3D-Engine.exe
