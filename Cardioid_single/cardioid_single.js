@@ -4,8 +4,8 @@ const r = CIRCLE_DIAMETER / 2;
 const hieght = 1.25*CIRCLE_DIAMETER;
 const width = 1.25*CIRCLE_DIAMETER;
 
-let factor = 653;
-let base = 3000;
+let factor = 510;
+let base = 1024;
 
 function setup() {
   createCanvas(width, hieght);

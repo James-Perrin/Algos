@@ -37,7 +37,7 @@ function draw() {
       const b = getVector(i * factor, base);
       line(a.x, a.y, b.x, b.y);
     }
-    text(base + ":" + factor, -r-5, -r-5);
+    text((factor/base).toFixed(2) , -r-5, -r-5);
     increaseFactor();
   } else if (factor > base) {
     increaseBase();  
