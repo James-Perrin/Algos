@@ -4,8 +4,9 @@ const r = CIRCLE_DIAMETER / 2;
 const hieght = 1.25*CIRCLE_DIAMETER;
 const width = 1.25*CIRCLE_DIAMETER;
 
-let factor = 510;
-let base = 1024;
+let scaler = 1;
+let factor = 501*scaler;
+let base = 1000*scaler;
 
 function setup() {
   createCanvas(width, hieght);
@@ -43,8 +44,9 @@ function draw() {
   }
   stroke(255,255,255);
   strokeWeight(2);
-  textSize(60);
+  textSize(50);
   fill(255);
-  text(base + " : " + factor, -r-5, -r-5);  
+  text("b:f | " + base.toFixed(2) + " : " + factor.toFixed(2), -r-75, -r-20);
+  text("b/f | " + (base / factor).toFixed(5), r-(width*0.25), -r-20);
   noLoop();
 }
