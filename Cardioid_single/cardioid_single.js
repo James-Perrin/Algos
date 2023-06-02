@@ -5,7 +5,7 @@ const hieght = 1.25*CIRCLE_DIAMETER;
 const width = 1.25*CIRCLE_DIAMETER;
 
 let scaler = 1;
-let factor = 73453*scaler;
+let factor = 710*scaler;
 let base = 1000*scaler;
 
 function setup() {
